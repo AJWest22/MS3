@@ -28,25 +28,43 @@ def get_genres():
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
-        existing_user = mongo.db.username.find_one(
+        existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for("signup"))
-        
+            return redirect(url_for("signup"))       
         signup = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(signup)
-
         session["user"] = request.form.get("username").lower()
         flash("You've signed up!")
     return render_template("signup.html")
 
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        if existing_user:
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+            else:
+                flash("Incorrect Username and/or password")
+                return redirect(url_for("login"))
+
+        else:
+            flash("Incorrect Username and/or password")
+            return redirect(url_for("login"))
+    return render_template("login.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")), 
             debug=True)
+
