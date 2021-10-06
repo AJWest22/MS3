@@ -9,8 +9,9 @@
                 <strong>{{ books.genre_fantasy }}</strong>
             </div>
             <div class="collapsible-body">
-                <strong>{{ books.fantasy_genre }}</strong>
-                <p>{{ books.fantasy_authors }}</p>
+                <strong>{{ books.book_name }}</strong>
+                <p>{{ books.book_author }}</p>
+                <p><em>by: {{ books.created_by }}</em></p>
             </div>
         </li>
         {% endfor %}
