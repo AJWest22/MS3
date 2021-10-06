@@ -5,6 +5,18 @@
 
     <div class="row">
         <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                    <select id="genre_name" name="genre_name" class="validate" required>
+                        <option value="" disabled selected>Choose genre</option>
+                        {% for genres in genres %}
+                            <option value="{{ genres.genre_name }}">{{ genres.genre_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="genre_name">Book Genre</label>
+                </div>
+            </div>
           <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-book-open prefix light-blue-text text-darken-4"></i>
