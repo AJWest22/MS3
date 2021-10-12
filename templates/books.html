@@ -1,20 +1,114 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <ul class="collapsible">
-        {% for books in books %}
+<h1>Genres and Books</h1>
+
+    <ul class="collapsible"> 
         <li>
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
                 <i class="fas fa-caret-down"></i>
-                <strong>{{ books.genre_fantasy }}</strong>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_fantasy }}</strong>
+                {% endfor %}
             </div>
             <div class="collapsible-body">
-                <strong>{{ books.book_name }}</strong>
-                <p>{{ books.book_author }}</p>
-                <p><em>by: {{ books.created_by }}</em></p>
+                {% for books in books2 %}
+                <strong>{{ books.fantasy_books_and_authors }}</strong>
+                {% endfor %}
             </div>
         </li>
-        {% endfor %}
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_scifi }}</strong>
+                {% endfor %}
+            </div>
+            <div class="collapsible-body">
+                {% for books in books2 %}
+                <strong>{{ books.scifi_books_and_authors }}</strong>
+                {% endfor %}
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_crime }}</strong>
+                {% endfor %}
+            </div>
+            <div class="collapsible-body">
+                {% for books in books2 %}
+                <strong>{{ books.crime_books_and_authors }}</strong>
+                <p>{{ books.crime_authors }}</p>
+                {% endfor %}
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_thriller }}</strong>
+                {% endfor %}
+            </div>
+            <div class="collapsible-body">
+                {% for books in books2 %}
+                <strong>{{ books.thriller_books_and_authors }}</strong>
+                {% endfor %}
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_nonfiction }}</strong>
+                {% endfor %}
+            </div>
+            <div class="collapsible-body">
+                {% for books in books2 %}
+                <strong>{{ books.nonfiction_books_and_authors }}</strong>
+                {% endfor %}
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_war }}</strong>
+                {% endfor %}
+            </div>
+            <div class="collapsible-body">
+                {% for books in books2 %}
+                <strong>{{ books.war_books_and_authors }}</strong>
+                {% endfor %}
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_horror }}</strong>
+                {% endfor %}
+            </div>
+            <div class="collapsible-body">
+                {% for books in books2 %}
+                <strong>{{ books.horror_books_and_authors }}</strong>
+                {% endfor %}
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                {% for genres in genres %}
+                <strong>{{ genres.genre_action }}</strong>
+                {% endfor %}
+            </div>
+            <div class="collapsible-body">
+                {% for books in books2 %}
+                <strong>{{ books.action_books_and_authors }}</strong>
+                {% endfor %}
+            </div>
+        </li>
     </ul>
             
 

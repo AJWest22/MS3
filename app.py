@@ -19,10 +19,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_genres")
-def get_genres():
-    books = list(mongo.db.books.find())
-    return render_template("books.html", books=books)
+@app.route("/get_books")
+def get_books():
+    genres = list(mongo.db.genres.find())
+    books = list(mongo.db.books2.find())
+    return render_template("books.html", books2=books, genres=genres)
 
 
 @app.route("/signup", methods=["GET", "POST"])
@@ -86,21 +87,28 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_book", methods=["GET", "POST"])
-def add_book():
+@app.route("/add_review", methods=["GET", "POST"])
+def add_review():
     if request.method == "POST":
-        books = {
+        review = {
             "genre_name": request.form.get("genre_name"),
-            "book_name": request.form.get("books"),
+            "book_name": request.form.get("book_name"),
+            "book_author": request.form.get("book_author"),
             "book_description": request.form.get("book_description"),
             "created_by": session["user"]
         }
-        mongo.db.books.insert_one(books)
-        flash("Book successfully added")
-        return redirect(url_for("add_book"))
+        mongo.db.reviews.insert_one(review)
+        flash("Review successfully added")
+        return redirect(url_for("reviews"))
 
-    genres = mongo.db.genres.find().sort("genres_name", 1)
-    return render_template("add_book.html", genres=genres)
+    genres2 = mongo.db.genres2.find().sort("genre_name", 1)
+    return render_template("add_review.html", genres2=genres2)
+
+
+@app.route("/reviews")
+def reviews():
+    reviews = list(mongo.db.reviews.find())
+    return render_template("reviews.html", reviews=reviews)
 
 
 if __name__ == "__main__":

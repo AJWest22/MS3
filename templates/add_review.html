@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="light-blue-text text-darken-4 center-align">Add Book</h3>
+    <h3 class="light-blue-text text-darken-4 center-align">Add Review</h3>
 
     <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('add_book') }}">
+        <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
                     <select id="genre_name" name="genre_name" class="validate" required>
                         <option value="" disabled selected>Choose genre</option>
-                        {% for genres in genres %}
-                            <option value="{{ genres.genre_name }}">{{ genres.genre_name }}</option>
+                        {% for genres2 in genres2 %}
+                            <option value="{{ genres2.genre_name }}">{{ genres2.genre_name }}</option>
                         {% endfor %}
                     </select>
                     <label for="genre_name">Book Genre</label>
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col s12 center-align">
                     <button type="submit" class="btn-large light-blue darken-1 text-shadow-1">
-                        Add Book <i class="fas fa-plus-square right"></i>
+                        Add Review <i class="fas fa-plus-square right"></i>
                     </button>
                 </div>
             </div>
