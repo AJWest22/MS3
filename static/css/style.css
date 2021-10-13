@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .flashes h4 {
@@ -13,4 +17,17 @@
 .collapsible-header .col-strong {
     margin: 5px;
     line-height: 42px;
+}
+
+.header-text {
+    text-align: center;
+    font-family: Passion-One;
+    font-size: 4em;
+}
+
+.sub-text {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1em;
+    margin: 2em;
 }
