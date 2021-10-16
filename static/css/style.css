@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
@@ -21,7 +21,7 @@
 
 .header-text {
     text-align: center;
-    font-family: Passion-One;
+    font-family: Oswald;
     font-size: 4em;
 }
 
