@@ -138,7 +138,8 @@ def delete_review(reviews_id):
 
 @app.route("/contact_us")
 def contact_us():
-    return render_template('contact_us.html')
+    return render_template('contact_page.html')
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
