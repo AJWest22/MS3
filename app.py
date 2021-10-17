@@ -34,10 +34,11 @@ def signup():
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for("signup"))       
+            return redirect(url_for("signup"))    
         signup = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "birthday": request.form.get("birthday")
         }
         mongo.db.users.insert_one(signup)
         session["user"] = request.form.get("username").lower()
