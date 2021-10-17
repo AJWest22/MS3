@@ -32,6 +32,10 @@
     margin: 2em;
 }
 
+h1 {
+    font-family: oswald;
+    text-align: center;
+}
 
 h3{
     font-family: Oswald;
