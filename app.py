@@ -138,6 +138,13 @@ def delete_review(reviews_id):
 
 @app.route("/contact_page", methods=["GET", "POST"])
 def contact_page():
+    if request.method == "POST":
+        improvement = {
+            "email": request.form.get("email").lower(),
+            "feedback": request.form.get("feedback").lower()
+        }
+        mongo.db.improvements.insert_one(improvement)
+        flash("Thank you for your feedback")
     return render_template('contact_page.html')
 
 
