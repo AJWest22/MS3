@@ -136,8 +136,8 @@ def delete_review(reviews_id):
     return redirect(url_for("reviews"))
 
 
-@app.route("/contact_us")
-def contact_us():
+@app.route("/contact_page", methods=["GET", "POST"])
+def contact_page():
     return render_template('contact_page.html')
 
 

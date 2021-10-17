@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3>Contact Us</h3>
+    <h3>Contact Page</h3>
     <p class="sub-text">Fill out the form below to contact us with any problems you may
         have with the site, or with any improvements you think could improve the site
     </p>
 
     <h3>Contact Form</h3>
+    <div class="row">
+        <form class="col s12" method="POST" action="{{ url_for('contact_page') }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user prefix light-blue-text text-darken-4"></i>
+                    <input id="username" name="username" type="text" minlength="5"
+                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+        </form>
+    </div>
 
 {% endblock %}
