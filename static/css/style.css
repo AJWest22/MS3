@@ -43,8 +43,9 @@ h3{
 }
 
 .carousel-item>img{
-    height: 20em;
+    height: 30em;
     width: 35em;
+    padding-bottom: 10em;
 }
 
 .review-image {
