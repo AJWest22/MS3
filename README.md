@@ -26,3 +26,13 @@ UX GOALS:
 
 Users can create, edit and delete reviews, and browse recommendations by others.
 
+OWNERS GOALS:
+
+Provide a service that encourages people to read, and find good books.
+
+ABOUT THE SITE:
+
+The site has a total of 9 pages. Some are only visible to users who are logged in (profile page for example).
+Users who are logged in have the option to add, edit and delete their reviews, while those who aren't logged in
+can only browse other people's reviews.
+
