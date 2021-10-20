@@ -27,7 +27,7 @@ Reader was used to check if accounts were showing on the Database, and Admin was
 Users can create, edit and delete reviews on books they've read, either books recommended on the site or one they've read themselves, and browse recommendations by others.
 
 
-**OWNERS GOALS:**
+**SITEOWNERS GOALS:**
 
 Provide a service that encourages people to read books and genres they may not normally try, and find good books.
 
@@ -83,9 +83,9 @@ MongoDB is used for the site as it offers a open source document-orientated data
 
 *improvements* collection holds information submitted from the contact us page, including email address to contact the person with and their feedback.
 
-*reviews* collection holds the data submitted through the add a review page, this includes, the genre, the name of the book, the name of the person who submitted it, the author and the review itself.
+*reviews* collection holds the data submitted through the add a review page, this includes, the genre, the name of the book, the name of the person who submitted it, the author and the review itself. 
 
-*users* holds the information of people who have created accounts to the site.
+*users* holds the information of people who have created accounts to the site. Information collected in this collection on the server includes: username, and their password which can't be read using password_hash encryption. 
 
 PyMongo is currently used to connect the database with the site. 
 
@@ -94,17 +94,25 @@ PyMongo is currently used to connect the database with the site.
 
 *TYPOGRAPHY* The site uses Oswald font (imported from google fonts) and Roboto (also imported from Google fonts). The reason for these two fonts is they are becoming increasingly popular amongst web designers, and also lift the site a bit. For example the header's oswald font creates a bold, dark eye catching effect for the header. The nav bar also has a text-shadow applied to it, again using the Materialize CSS framework, ('text-shadow') to help make it stand out and be more readable against the paler blue background.
 
-*COLORS:* The site uses predominantly blue coloring, and the code used to make it comes from the color classes in the Materialize CSS framework. The navbar uses the class **blue lighten-4** which has the corresponding hex code of: #bbdefb. The dropdown menus uses the Materialize CSS color class of **blue accent-3**, which has the corresponding hexcode of #2979ff. 
+*COLORS:* The site uses predominantly blue coloring, and the code used to make it comes from the color classes in the Materialize CSS framework. The navbar uses the class **blue lighten-4** which has the corresponding hex code of: #bbdefb. The dropdown menus uses the Materialize CSS color class of **blue accent-3**, which has the corresponding hexcode of #2979ff. The sites coloring is a softer tone and is designed to be simple, as reading books should be a relaxing task. 
 
-*IMAGES* The images used come from pixabay and pexels, and links to the images are used to connect them to their corresponding place on the site. 
+*IMAGES* The images used come from pixabay and pexels, and links to the images are used to connect them to their corresponding place on the site. They are chosen with the book genres in mind, so Game of Thrones and Harry Potter for fantasy, and images of dystopian cities for Sci-Fi.
 
+
+**CODE FEATURES:**
+
+Several code features include the if statements, that are used to display and hide certain webpages, for example the edit_review page cannot be seen unless a user is logged in. They are also used to check if a username and/or password is right, and dictate the appropriate action if something turns out to be false. 
+
+For loops {{% for genres in genres2 %}} are used to display information on the server on theto the site. This is done by looping through the data and then displaying onto the site. The for loops were used for this as when user add reviews or edit or delete them, the for loops can loop through the new data in the database, and updates itself across the site.
+
+Forms are used as a way of providing some interaction with the user. This is done primarily using the contact form, which allows users to leave feedback on the site on what can be improved, and ask any questions they may have. Users don't have to have accounts with the site, non-users can submit the form too, this is because if a new user has questions and is unsure about joining they can ask it and not feel pressured into anything.
 
 **FEATURES TO BE ADDED**
 
 This project has some features I would like to add at a later date. 
 
-1: The ability for users to display their social media pages on their profile. This was attempted but due to time constraints couldn't be done in time.
+1: The ability for users to display their social media pages on their profile. This was attempted but due to time constraints couldn't be done in time. If statements would be used to check if they had any social media, and a flash message to be displayed if they didn't have any, prompting them to add some. 
 
-2: Pagination: Pagination was originally going to be used to keep the users reviews displayed in an orderly fashion, however after much research, I couldn't find anything on Pagination for PyMongo, and MongoDB, it was using SQL Lite and SQL Alchemy, and I needed to install MongoEngine instead of PyMongo. 
+2: Pagination: Pagination was originally going to be used to keep the users reviews displayed in an orderly fashion, however after much research, I couldn't find anything on Pagination for PyMongo, and MongoDB, it was all either using SQL Lite and SQL Alchemy, or MongoEngine instead of PyMongo. 
 
 3: Profile picture: Currently a carousel from Materialize CSS is used to display images on the site and they can't chosen by the user, at some pont I'd like to be able to add the option for the user to display their own profile picture on the site instead of relying on the sites images.
