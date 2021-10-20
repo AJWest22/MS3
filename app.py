@@ -21,6 +21,10 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_books")
 def get_books():
+    """
+    Gets the books from the server and
+    displays them on the site.
+    """
     genres = list(mongo.db.genres.find())
     books = list(mongo.db.books2.find())
     return render_template("books.html", books2=books, genres=genres)
@@ -28,6 +32,10 @@ def get_books():
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
+    """
+    Allows users to create an account, and post
+    the details to the server.
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -50,6 +58,9 @@ def signup():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Existing users to login to thir account.
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -73,6 +84,10 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    Displays the users profile and name on
+    the profile page, and gets it from server.
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
@@ -83,6 +98,9 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    """
+    Allows users to logout.
+    """
     flash("You successfully logged out!")
     session.pop("user")
     return redirect(url_for("login"))
@@ -90,6 +108,10 @@ def logout():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    """
+    Allows users to add a review to the site and
+    stores it on the server.
+    """
     if request.method == "POST":
         review = {
             "genre_name": request.form.get("genre_name"),
@@ -108,12 +130,19 @@ def add_review():
 
 @app.route("/reviews")
 def reviews():
+    """
+    Gets and displays the reviews stored on the
+    server and shows them on the site.
+    """
     reviews = list(mongo.db.reviews.find())
     return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/edit_review/<reviews_id>", methods=["GET", "POST"])
 def edit_review(reviews_id):
+    """
+    Lets users edit their reviews.
+    """
     if request.method == "POST":
         submit = {
             "genre_name": request.form.get("genre_name"),
@@ -132,6 +161,9 @@ def edit_review(reviews_id):
 
 @app.route("/delete_review/<reviews_id>")
 def delete_review(reviews_id):
+    """
+    Lets users delete their reviews.
+    """
     mongo.db.reviews.remove({"_id": ObjectId(reviews_id)})
     flash("Review Deleted")
     return redirect(url_for("reviews"))
@@ -139,6 +171,10 @@ def delete_review(reviews_id):
 
 @app.route("/contact_page", methods=["GET", "POST"])
 def contact_page():
+    """
+    Enables the form on contact page to be submitted
+    to the server.
+    """
     if request.method == "POST":
         improvement = {
             "email": request.form.get("email").lower(),
@@ -153,4 +189,3 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")), 
             debug=True)
-

@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!--Header text-->
     <h3 class="light-blue-text text-darken-4 center-align">Edit Review</h3>
 
+    <!--Gets the info of the review on reviews page and copies data across on to edit review page-->
     <div class="row">
         <form class="col s12" method="POST" action="{{ url_for('edit_review', reviews_id=reviews._id) }}">
             <div class="row">

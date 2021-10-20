@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--Header Image-->
 <div>
     <img class="review-image" src="https://cdn.pixabay.com/photo/2015/09/05/07/28/writing-923882_1280.jpg" alt="review">
 </div>
 
+<!--Heading and subheading text-->
 <h3 class="black-text center-align">Reviews</h3>
 <p class="sub-text">Below are some reviews by our users for books either recommended by us,
     or some they recommend themselves. Please note, you need to be logged
     in to add a review. 
 </p>
-
+    <!--Displays the reviews on the server on the site-->
     <ul class="collapsible">
         {% for reviews in reviews %}
         <li>
@@ -18,16 +20,19 @@
                 <div class="col s3">
                     <i class="fas fa-caret-down"></i>
                     <i class="fas fa-pen-square light-blue-text text-lighten-2 tooltipped"></i>
+                    <!--Adds a delete and edit button on a user's reviews if they are logged in-->
                     {% if session.user|lower == reviews.created_by|lower %}
                         <a href="{{ url_for('delete_review', reviews_id=reviews._id) }}" class="btn-small green accent-4">Delete</a>
                         <a href="{{ url_for('edit_review', reviews_id=reviews._id) }}" class="btn-small light-blue lighten-1">Edit</a>
                     {% endif %}
                 </div>
+                <!--Displays a review, its genre and books name-->
                 <div class="sol s9">
                     <strong>{{ reviews.reviews }}</strong>
                     <strong>{{ reviews.genre_name }}</strong> : {{ reviews.book_name }}
                 </div>
             </div>
+            <!--Displays a books description, author and who made the review-->
             <div class="collapsible-body">
                 <p>{{ reviews.book_description }}</p>
                 <p>{{ reviews.book_author }}</p>
