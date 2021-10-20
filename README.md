@@ -1,6 +1,6 @@
-MS3 README
+**MS3 README**
 
-OVERVIEW:
+**OVERVIEW:**
 This site was created for MS3 submission for Code Institute.
 The site's name is Book Recommendations.
 The source code can be found on GitHub
@@ -22,14 +22,21 @@ Both accounts are test accounts used to test site functionality, for example:
 Reader was used to check if accounts were showing on the Database, and Admin was used to check if only reviews added by admin could be edited by admin. 
 
 
+
+
 **UX GOALS:**
 
 Users can create, edit and delete reviews on books they've read, either books recommended on the site or one they've read themselves, and browse recommendations by others.
+
+Users can also leave feedback or ask any questions they may have regarding the site.
 
 
 **SITEOWNERS GOALS:**
 
 Provide a service that encourages people to read books and genres they may not normally try, and find good books.
+
+Ensure the database continues to accept new data, such as: books, reviews, users, and feedback or questions.
+
 
 **ABOUT THE SITE:**
 
@@ -37,6 +44,9 @@ The site has a total of 9 pages. Some are only visible to users who are logged i
 Users who are logged in have the option to add, edit and delete their reviews, while those who aren't logged in
 can only browse other people's reviews. The genres chosen range from the ones that tend to be more popular among
 people (Crime and Thriller) and those that aren't (Fantasy and Horror). 
+
+
+
 
 **Code Used**
 
@@ -46,6 +56,7 @@ The site is build using:
 *CSS* to add style to the site.
 
 *PYTHON* to add the backend functionality to the site.
+
 
 FRAMEWORKS
 
@@ -69,6 +80,8 @@ The static folder contains the JavaScript and CSS files, and is used to help str
 The app.py file provides the backend code that handles the data of the site. It is used for submitting data to the database and pulling information from the database. 
 
 
+
+
 **The DataBase**
 
 MongoDB is used for the site as it offers a open source document-orientated database. 
@@ -90,6 +103,8 @@ MongoDB is used for the site as it offers a open source document-orientated data
 PyMongo is currently used to connect the database with the site. 
 
 
+
+
 **DESIGN:**
 
 *TYPOGRAPHY* The site uses Oswald font (imported from google fonts) and Roboto (also imported from Google fonts). The reason for these two fonts is they are becoming increasingly popular amongst web designers, and also lift the site a bit. For example the header's oswald font creates a bold, dark eye catching effect for the header. The nav bar also has a text-shadow applied to it, again using the Materialize CSS framework, ('text-shadow') to help make it stand out and be more readable against the paler blue background.
@@ -99,6 +114,8 @@ PyMongo is currently used to connect the database with the site.
 *IMAGES* The images used come from pixabay and pexels, and links to the images are used to connect them to their corresponding place on the site. They are chosen with the book genres in mind, so Game of Thrones and Harry Potter for fantasy, and images of dystopian cities for Sci-Fi.
 
 
+
+
 **CODE FEATURES:**
 
 Several code features include the if statements, that are used to display and hide certain webpages, for example the edit_review page cannot be seen unless a user is logged in. They are also used to check if a username and/or password is right, and dictate the appropriate action if something turns out to be false. 
@@ -106,6 +123,9 @@ Several code features include the if statements, that are used to display and hi
 For loops {{% for genres in genres2 %}} are used to display information on the server on theto the site. This is done by looping through the data and then displaying onto the site. The for loops were used for this as when user add reviews or edit or delete them, the for loops can loop through the new data in the database, and updates itself across the site.
 
 Forms are used as a way of providing some interaction with the user. This is done primarily using the contact form, which allows users to leave feedback on the site on what can be improved, and ask any questions they may have. Users don't have to have accounts with the site, non-users can submit the form too, this is because if a new user has questions and is unsure about joining they can ask it and not feel pressured into anything.
+
+
+
 
 **FEATURES TO BE ADDED**
 
