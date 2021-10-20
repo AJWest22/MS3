@@ -71,13 +71,15 @@ FILES MADE:
 
 There were 9 HTML files made in this project, 2 python files, a JavaScript file, a CSS file, a Procfile and requirements.txt file. 
 
-Most can be viewed on GitHUb, however the env.py file contains sensitve information, and has not been pushed to GitHub.
+Most can be viewed on GitHUb, however the env.py file, that was created to connnect the database with the site, contains sensitve information, and has not been pushed to GitHub.
 
-The HTML files are stored in the templates folder, as they form the basis of the site. 
+The HTML files are stored in the templates folder, as they form the basis of the site, and it helps structure and organiase the code. 
 
-The static folder contains the JavaScript and CSS files, and is used to help structure the code.
+The static folder contains the JavaScript and CSS files, and is used to help structure the code files, and keep things orderly.
 
 The app.py file provides the backend code that handles the data of the site. It is used for submitting data to the database and pulling information from the database. 
+
+The env.py file that was created contains information regarding the database and has not been pushed to GitHub.
 
 
 
@@ -88,9 +90,9 @@ MongoDB is used for the site as it offers a open source document-orientated data
 
 *Structure* The Database has 6 collections described below:
 
-*Books2* This holds the books that are recommended on the site already and their authors.
+*Books2* This holds the books that are recommended on the site by the site owner and their authors in their correct genre.
 
-*genres* is used to connect the dropdown menus with the genres on on the homepage to the database.
+*genres* is used to connect the dropdown menus' genres on on the homepage to the ones stored in the database.
 
 *genres2* is used in the dropdown menu on the add-review page to connect the genres with the genre field on the form. Due to technical difficulties, it wasn't possible to connect the genres collection with the form, so genres2 was created. The site was getting errors, and the genres weren't displaying correctly.
 
@@ -100,7 +102,7 @@ MongoDB is used for the site as it offers a open source document-orientated data
 
 *users* holds the information of people who have created accounts to the site. Information collected in this collection on the server includes: username, and their password which can't be read using password_hash encryption. 
 
-PyMongo is currently used to connect the database with the site. 
+PyMongo is currently used to connect the database with the site, as it is simpler to use than other Python frameworks.
 
 
 
@@ -136,3 +138,11 @@ This project has some features I would like to add at a later date.
 2: Pagination: Pagination was originally going to be used to keep the users reviews displayed in an orderly fashion, however after much research, I couldn't find anything on Pagination for PyMongo, and MongoDB, it was all either using SQL Lite and SQL Alchemy, or MongoEngine instead of PyMongo. 
 
 3: Profile picture: Currently a carousel from Materialize CSS is used to display images on the site and they can't chosen by the user, at some pont I'd like to be able to add the option for the user to display their own profile picture on the site instead of relying on the sites images.
+
+
+
+
+**TESTING:**
+
+This site has been tested on: Acer Aspire laptop, iPad 8th Gen, iPhone SE 2020 to check if it is sized appropriately.
+Family and friends have offered feedback on the design choices and images used. 
