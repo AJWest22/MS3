@@ -29,7 +29,9 @@
 8. [Features to be Added](#features-to-be-added)
 
 9. [Testing](#testing)
-
+    1. [HTML Validation](#html-validation)
+    2. [CSS Validation](#css-validation)
+    3. [Python Validation](#python-validation)
 
 
 
@@ -336,7 +338,7 @@ This project has some features I would like to add at a later date.
 ### HTML Validation
    - The code was validated using NU HTML Validator and displayed some errors linked to the flask for loops, and the scripts needed for Matertialize CSS, and CSS classes. 
 
-   <details><summary>CSS Validation p1</summary>
+   <details><summary>HTML Validation</summary>
   <img src="static/images/html-validation.png">
   </details>
   
@@ -351,3 +353,15 @@ This project has some features I would like to add at a later date.
   <details><summary>CSS Validation p2.</summary>
   <img src="static/images/css-validation2.png">
   </details>
+
+
+### Python Validation
+- The code was validated using PEP8 online check, and had several errors to do with whitespace, however when i have debugged these, I have encountered more errors. For example in the PEP8 validator it asks for a new line at the end of file, when I add one in, I get an error saying trailing whitespace.
+
+<details><summary>CSS Validation p2.</summary>
+  <img src="static/images/python-validation.png">
+  </details>
+
+
+
+
