@@ -178,7 +178,7 @@ PyMongo is currently used to connect the database with the site, as it is simple
 Below are some images of the collections in the database so you can see how data is stored.
 
 - <details><summary>Books2 Collection which contains information on the books and authors:</summary>
-  <img src="images/books2.jpg">
+  <img src="/images/books2.jpg">
   </details>
 
 ## **Design**
