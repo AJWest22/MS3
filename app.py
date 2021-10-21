@@ -10,12 +10,21 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
+app.register_error_handler(404, page_not_found)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Renders the 404.html template in the case of a 404 error
+    """
+    return render_template('404.html'), 404
 
 
 @app.route("/")
