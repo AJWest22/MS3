@@ -173,7 +173,13 @@ the name of the person who submitted it, the author and the review itself.
 PyMongo is currently used to connect the database with the site, as it is simpler to use than other Python frameworks, and was the one I felt most confident using.
 
 
+### **Database Collections** 
 
+Below are some images of the collections in the database so you can see how data is stored.
+
+- <details><summary>Books2 Collection which contains information on the books and authors:</summary>
+  <img src="images/books2.jpg">
+  </details>
 
 ## **Design**
 
