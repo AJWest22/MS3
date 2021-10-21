@@ -42,6 +42,8 @@
      2. [Imagery](#imagery)
      3. [CSS Framework](#css-framework)
      4. [JQuery Framework](#jquery-framework)
+
+12. [Acknowledgements](#acknowledgements)
   
 
 
@@ -458,3 +460,10 @@ Materialize CSS provided the Jquery and some CSS for this site: https://material
 ### JQUery Framework
 
 Materialize CSS also provided the JQuery for this site, for the dropdown menus on the homepage and add a review page, the carousel on the profile page, and slider on the homepage. 
+
+
+## Acknowledgements 
+
+- My mentor Mo Shami for his feedback.
+
+- My family and friends for testing this site on their devices.
