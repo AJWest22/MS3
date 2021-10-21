@@ -437,17 +437,17 @@ All links to specific images are as follows:
    - Horror Image: https://cdn.pixabay.com/photo/2017/10/13/14/15/fantasy-2847724_1280.jpg
 
   - Reviews Page:
-   - https://cdn.pixabay.com/photo/2015/09/05/07/28/writing-923882_1280.jpg
+    - https://cdn.pixabay.com/photo/2015/09/05/07/28/writing-923882_1280.jpg
   
   - Contact Us Page:
-   - https://cdn.pixabay.com/photo/2017/02/07/00/44/feedback-2044700_1280.jpg
+    - https://cdn.pixabay.com/photo/2017/02/07/00/44/feedback-2044700_1280.jpg
   
   - Profile Page Carousel (in order of appearance)
-   - Carousel 1: https://cdn.pixabay.com/photo/2016/10/07/22/15/game-of-thrones-1722710_1280.png
-   - Carousel 2: https://cdn.pixabay.com/photo/2020/11/13/16/51/white-walker-5739181_1280.jpg
-   - Carousel 3: https://cdn.pixabay.com/photo/2019/05/05/15/05/game-of-thrones-4180794_1280.jpg
-   - Carousel 4: https://cdn.pixabay.com/photo/2014/08/14/16/32/harry-potter-418108_1280.jpg
-   - Carousel 5: https://cdn.pixabay.com/photo/2020/03/31/13/29/ufo-4987627_1280.jpg
+    - Carousel 1: https://cdn.pixabay.com/photo/2016/10/07/22/15/game-of-thrones-1722710_1280.png
+    - Carousel 2: https://cdn.pixabay.com/photo/2020/11/13/16/51/white-walker-5739181_1280.jpg
+    - Carousel 3: https://cdn.pixabay.com/photo/2019/05/05/15/05/game-of-thrones-4180794_1280.jpg
+    - Carousel 4: https://cdn.pixabay.com/photo/2014/08/14/16/32/harry-potter-418108_1280.jpg
+    - Carousel 5: https://cdn.pixabay.com/photo/2020/03/31/13/29/ufo-4987627_1280.jpg
 
   
 ### CSS Framework
