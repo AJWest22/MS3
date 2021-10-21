@@ -177,21 +177,28 @@ PyMongo is currently used to connect the database with the site, as it is simple
 
 Below are some images of the collections in the database so you can see how data is stored.
 
-- <details><summary>Books2 Collection which contains information on the books and authors:</summary>
+- <details><summary>Books2 Collection which contains data on the books and authors:</summary>
   <img src="static/images/books2.jpg">
   </details>
 
-- <details><summary>Genres Collection holds the information on the genres used in the dropdowns menu on the homepage:</summary>
+- <details><summary>Genres holds the data on the genres used in the dropdowns menu on the homepage:</summary>
   <img src="static/images/genres.jpg">
   </details>
 
-- <details><summary>Genres2 Collection which the information on the genres used in the dropdown menu on the review page:</summary>
+- <details><summary>Genres2 holds the data on the genres used in the dropdown menu on the review page:</summary>
   <img src="static/images/genres2.jpg">
   </details>
 
-- <details><summary>Users Collection has the information on the users of the site, password has been encrypted so can't be read.
-</summary>
+- <details><summary>Users has the data on the users of the site, password has been encrypted so can't be read.</summary>
   <img src="static/images/users.jpg">
+  </details>
+
+- <details><summary>Improvements has the feedback data. The feedback key can also hold question data.</summary>
+  <img src="static/images/improvements.jpg">
+  </details>
+
+- <details><summary>Reviews has the information on the reviews left by users on the site.</summary>
+  <img src="static/images/reviews.jpg">
   </details>
 
 ## **Design**
