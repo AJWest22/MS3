@@ -32,6 +32,8 @@
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
     3. [Python Validation](#python-validation)
+    4. [Browser Compatibility](#browser-compatibility)
+    5. [Devices Tested On](#devices-tested-on)
 
 10. [Deployment](#deployment)
 
@@ -364,6 +366,23 @@ This project has some features I would like to add at a later date.
   <img src="static/images/python-validation.png">
   </details>
 
+
+### Browser Compatibility
+
+The website has been viewed on the following browsers:
+ - Google Chrome
+ - Mozilla Firefox
+ - Safari
+ - Microsoft Edge
+
+### Devices tested on
+
+The site has been tested on the following devices:
+
+ - iPhone SE 2020
+ - iPad 8th Gen
+ - Acer Aspire 5
+ - iPad 7th Gen
 
 ## Deployment
 
