@@ -178,7 +178,15 @@ PyMongo is currently used to connect the database with the site, as it is simple
 Below are some images of the collections in the database so you can see how data is stored.
 
 - <details><summary>Books2 Collection which contains information on the books and authors:</summary>
-  <img src="/images/books2.jpg">
+  <img src="static/images/books2.jpg">
+  </details>
+
+- <details><summary>Genres Collection holds the information on the genres used in the dropdowns menu on the homepage:</summary>
+  <img src="static/images/genres.jpg">
+  </details>
+
+- - <details><summary>Genres Collection which the information on the genres used in the dropdowns menu on the homepage:</summary>
+  <img src="static/images/genres.jpg">
   </details>
 
 ## **Design**
