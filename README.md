@@ -333,5 +333,21 @@ This project has some features I would like to add at a later date.
 
 ## **TESTING**
 
-This site has been tested on: Acer Aspire laptop, iPad 8th Gen, iPhone SE 2020 to check if it is sized appropriately.
-Family and friends have offered feedback on the design choices and images used. 
+### HTML Validation
+   - The code was validated using NU HTML Validator and displayed some errors linked to the flask for loops, and the scripts needed for Matertialize CSS, and CSS classes. 
+
+   <details><summary>CSS Validation p1</summary>
+  <img src="static/images/html-validation.png">
+  </details>
+  
+
+### CSS Validation
+  - The code was tested using The W3C Jigsaw CSS Validation Service and encountered no errors:
+
+  <details><summary>CSS Validation p1</summary>
+  <img src="static/images/css-validation1.png">
+  </details>
+
+  <details><summary>CSS Validation p2.</summary>
+  <img src="static/images/css-validation2.png">
+  </details>
