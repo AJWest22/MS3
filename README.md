@@ -387,3 +387,17 @@ This project has some features I would like to add at a later date.
 
   9. Once dployed, click open app.
 
+
+## Credits
+
+### Icons
+All icons can be found here: https://fontawesome.com/
+
+### Images
+
+All images come from pixabay and pexels: https://pixabay.com/
+                                         https://www.pexels.com/
+
+### CSS Framework
+
+Materialize CSS provided the Jquery and some CSS for this site: https://materializecss.com/
