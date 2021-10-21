@@ -185,8 +185,13 @@ Below are some images of the collections in the database so you can see how data
   <img src="static/images/genres.jpg">
   </details>
 
-- - <details><summary>Genres Collection which the information on the genres used in the dropdowns menu on the homepage:</summary>
-  <img src="static/images/genres.jpg">
+- <details><summary>Genres2 Collection which the information on the genres used in the dropdown menu on the review page:</summary>
+  <img src="static/images/genres2.jpg">
+  </details>
+
+- <details><summary>Users Collection has the information on the users of the site, password has been encrypted so can't be read.
+</summary>
+  <img src="static/images/users.jpg">
   </details>
 
 ## **Design**
