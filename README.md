@@ -43,13 +43,11 @@
 
  - There are currently two types of accounts at the moment:
 
- - **Username**: Reader **Password**: Reader
+     **Username**: Reader **Password**: Reader
+    and 
 
- - and 
-
- - **Username**: Admin **Password** Admin
-
- - Both accounts are test accounts used to test site functionality, for example: 
+    **Username**: Admin **Password** Admin
+Both accounts are test accounts used to test site functionality, for example: 
 Reader was used to check if accounts were showing on the Database, and Admin was used to check if only reviews added by admin could be edited by admin. 
 
 
@@ -108,14 +106,14 @@ Reader was used to check if accounts were showing on the Database, and Admin was
  - There were 9 HTML files made in this project, 2 python files, a JavaScript file, a CSS file, a Procfile and requirements.txt file. 
 
  - Most can be viewed on GitHUb, however the env.py file, that was created to connnect the database with the site, contains 
- - sensitve information, and has not been pushed to GitHub.
+   sensitve information, and has not been pushed to GitHub.
 
- - The HTML files are stored in the templates folder, as they form the basis of the site, and it helps structure and organiase 
- - the code. 
+ - The HTML files are stored in the templates folder, as they form the basis of the site, and it helps structure and organise 
+   the code. 
 
  - The static folder contains the JavaScript and CSS files, and is used to help structure the code files, and keep things orderly.
 
- - The app.py file provides the backend code that handles the data of the site. It is used for submitting data to the database    - and pulling information from the database. 
+ - The app.py file provides the backend code that handles the data of the site. It is used for submitting data to the database and pulling information from the database. 
 
  - The env.py file that was created contains information regarding the database and has not been pushed to GitHub.
 
