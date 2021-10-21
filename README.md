@@ -33,6 +33,8 @@
     2. [CSS Validation](#css-validation)
     3. [Python Validation](#python-validation)
 
+10. [Deployment](#deployment)
+
 
 
 ## **Overview**
@@ -350,7 +352,7 @@ This project has some features I would like to add at a later date.
   <img src="static/images/css-validation1.png">
   </details>
 
-  <details><summary>CSS Validation p2.</summary>
+  <details><summary>CSS Validation p2</summary>
   <img src="static/images/css-validation2.png">
   </details>
 
@@ -358,10 +360,30 @@ This project has some features I would like to add at a later date.
 ### Python Validation
 - The code was validated using PEP8 online check, and had several errors to do with whitespace, however when i have debugged these, I have encountered more errors. For example in the PEP8 validator it asks for a new line at the end of file, when I add one in, I get an error saying trailing whitespace.
 
-<details><summary>CSS Validation p2.</summary>
+  <details><summary>Python Validation</summary>
   <img src="static/images/python-validation.png">
   </details>
 
 
+## Deployment
 
+- This site was deployed using Heroku using the following steps:
+
+  1. Create a proc.file in your files, and connect to the app.py file.
+  
+  2. Create a requirements.txt file.
+
+  3. Create an account on heroku.com
+
+  4. Create a new application and give it a name. NOTE: This name must be new, and one not already in use.
+
+  5. In the application dashboard, go to the deploy section and connect your application to your chosen GitHub repo, by selecting your repo's name.
+
+  6. Select the branch to enable automatic deploys, (as was done with this project). Alternatively you can set it to deploy manually.
+
+  7. Set key/value pairs for the following keys:IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
+
+  8. Return to your dashboard and click deploy.
+
+  9. Once dployed, click open app.
 
