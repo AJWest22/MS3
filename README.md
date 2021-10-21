@@ -17,6 +17,18 @@
 
 5. [The Database](#the-database)
 
+6. [Design](#design)
+    1.[Typography](#typography)
+    2.[Colors](#colors)
+    3.[Images](#images)
+
+7. [Code Features](#code-features)
+
+8. [Features to be Added](#features-to-be-added)
+
+9. [Testing](#testing)
+
+
 
 
 ## **Overview**
@@ -60,8 +72,10 @@ Reader was used to check if accounts were showing on the Database, and Admin was
 ## **About The Site**
 
  - The site has a total of 9 pages. Some are only visible to users who are logged in (profile page for example).
-Users who are logged in have the option to add, edit and delete their reviews, while those who aren't logged in
-can only browse other people's reviews. The site's purpose is to help people find books they'd like to read, and users can create, edit and delete recommendations/reviews on books they have read. The genres chosen range from the ones that tend to be more popular among people (Crime and Thriller) and those that aren't (Fantasy and Horror) so that it caters for a wide array of audiences. 
+ - Users who are logged in have the option to add, edit and delete their reviews, while those who aren't logged in
+ - can only browse other people's reviews. The site's purpose is to help people find books they'd like to read, and users can
+ - create, edit and delete recommendations/reviews on books they have read. The genres chosen range from the ones that tend to be - more popular among people (Crime and Thriller) and those that aren't (Fantasy and Horror) so that it caters for a wide array 
+ - of audiences. 
 
 ### **Target Audience**
  - The site is primarily aimed and adults/young adults who are either big readers and want to find thier next book, or people who want to read more but aren't sure what to read. 
@@ -69,7 +83,7 @@ can only browse other people's reviews. The site's purpose is to help people fin
 
 ## **Code Used**
 
-- The site is build using:
+ The site is build using:
  - *HTML* to provide the site's structure
 
  - *CSS* to add style to the site.
@@ -79,9 +93,12 @@ can only browse other people's reviews. The site's purpose is to help people fin
 
 ### **Frameworks**
 
- - *MATERIALIZE CSS* is used to help style the site, and add some features to the site using JQUERY. The code used by Materialize is marked. I chose to work with Materialize, as it incorporated bootstrap, that helps with the making the site mobile friendly, and also to challenge myself with learning a new framework. Materialize may help with styling, but there can be some speificity issues when using it. For example my issues of using it include: trying to size images in the carousel, and header images on the home and reviews pages. (The former has been resolved, but the latter is still not fullwidth). 
+ - *MATERIALIZE CSS* is used to help style the site, and add some features to the site using JQUERY. The code used by Materialize - is marked. I chose to work with Materialize, as it incorporated bootstrap, that helps with the making the site mobile 
+ - friendly, and also to challenge myself with learning a new framework. Materialize may help with styling, but there can be some
+ - speificity issues when using it. For example my issues of using it include: trying to size images in the carousel, and header  - images on the home and reviews pages. (The former has been resolved, but the latter is still not fullwidth). 
 
- - *FLASK* is used to help with the structuring of Python, and can be seen in the site using the for loops on the homepage that get the books from the server {% for books in books2 %}
+ - *FLASK* is used to help with the structuring of Python, and can be seen in the site using the for loops on the homepage that 
+ - get the books from the server {% for books in books2 %}
 
  - *Jinja Template* is used to render the templates and write code similar to Python.
 
@@ -90,13 +107,15 @@ can only browse other people's reviews. The site's purpose is to help people fin
 
  - There were 9 HTML files made in this project, 2 python files, a JavaScript file, a CSS file, a Procfile and requirements.txt file. 
 
- - Most can be viewed on GitHUb, however the env.py file, that was created to connnect the database with the site, contains sensitve information, and has not been pushed to GitHub.
+ - Most can be viewed on GitHUb, however the env.py file, that was created to connnect the database with the site, contains 
+ - sensitve information, and has not been pushed to GitHub.
 
- - The HTML files are stored in the templates folder, as they form the basis of the site, and it helps structure and organiase the code. 
+ - The HTML files are stored in the templates folder, as they form the basis of the site, and it helps structure and organiase 
+ - the code. 
 
  - The static folder contains the JavaScript and CSS files, and is used to help structure the code files, and keep things orderly.
 
- - The app.py file provides the backend code that handles the data of the site. It is used for submitting data to the database   and pulling information from the database. 
+ - The app.py file provides the backend code that handles the data of the site. It is used for submitting data to the database    - and pulling information from the database. 
 
  - The env.py file that was created contains information regarding the database and has not been pushed to GitHub.
 
@@ -107,38 +126,42 @@ can only browse other people's reviews. The site's purpose is to help people fin
 
 MongoDB is used for the site as it offers a open source document-orientated database. 
 
-*Structure* The Database has 6 collections described below:
+- *Structure* The Database has 6 collections described below:
 
-*Books2* This holds the books that are recommended on the site by the site owner and their authors in their correct genre.
+- *Books2* This holds the books that are recommended on the site by the site owner and their authors in their correct genre.
 
-*genres* is used to connect the dropdown menus' genres on on the homepage to the ones stored in the database.
+- *genres* is used to connect the dropdown menus' genres on on the homepage to the ones stored in the database.
 
-*genres2* is used in the dropdown menu on the add-review page to connect the genres with the genre field on the form. Due to technical difficulties, it wasn't possible to connect the genres collection with the form, so genres2 was created. The site was getting errors, and the genres weren't displaying correctly.
+- *genres2* is used in the dropdown menu on the add-review page to connect the genres with the genre field on the form. Due to 
+- technical difficulties, it wasn't possible to connect the genres collection with the form, so genres2 was created. The site was - getting errors, and the genres weren't displaying correctly.
 
-*improvements* collection holds information submitted from the contact us page, including email address to contact the person with and their feedback.
+- *improvements* collection holds information submitted from the contact us page, including email address to contact the person  - with and their feedback.
 
-*reviews* collection holds the data submitted through the add a review page, this includes, the genre, the name of the book, the name of the person who submitted it, the author and the review itself. 
+- *reviews* collection holds the data submitted through the add a review page, this includes, the genre, the name of the book,  
+- the name of the person who submitted it, the author and the review itself. 
 
-*users* holds the information of people who have created accounts to the site. Information collected in this collection on the server includes: username, and their password which can't be read using password_hash encryption. 
+- *users* holds the information of people who have created accounts to the site. Information collected in this collection on the - server includes: username, and their password which can't be read using password_hash encryption. 
 
-PyMongo is currently used to connect the database with the site, as it is simpler to use than other Python frameworks.
-
-
+PyMongo is currently used to connect the database with the site, as it is simpler to use than other Python frameworks, and was the one I felt most confident using.
 
 
-## **DESIGN**
+
+
+## **Design**
 
 ### Typography 
-    The site uses Oswald font (imported from google fonts) and Roboto (also imported from Google fonts). The reason for these two fonts is they are becoming increasingly popular amongst web designers, and also lift the site a bit. For example the header's oswald font creates a bold, dark eye catching effect for the header. The nav bar also has a text-shadow applied to it, again using the Materialize CSS framework, ('text-shadow') to help make it stand out and be more readable against the paler blue background.
+- The site uses Oswald font (imported from google fonts) and Roboto (also imported from Google fonts). The reason for these two  fonts is they are becoming increasingly popular amongst web designers, and also lift the site a bit. For example the header's oswald font creates a bold, dark eye catching effect for the header. The nav bar also has a text-shadow applied to it, again using the Materialize CSS framework, ('text-shadow') to help make it stand out and be more readable against the paler blue background.
 
-### Colors The site uses predominantly blue coloring, and the code used to make it comes from the color classes in the Materialize CSS framework. The navbar uses the class **blue lighten-4** which has the corresponding hex code of: #bbdefb. The dropdown menus uses the Materialize CSS color class of **blue accent-3**, which has the corresponding hexcode of #2979ff. The sites coloring is a softer tone and is designed to be simple, as reading books should be a relaxing task. 
+### Colors 
+ - The site uses predominantly blue coloring, and the code used to make it comes from the color classes in the Materialize CSS framework. The navbar uses the class **blue lighten-4** which has the corresponding hex code of: #bbdefb. The dropdown menus uses the Materialize CSS color class of **blue accent-3**, which has the corresponding hexcode of #2979ff. The sites coloring is a softer tone and is designed to be simple, as reading books should be a relaxing task. 
 
-Images The images used come from pixabay and pexels, and links to the images are used to connect them to their corresponding place on the site. They are chosen with the book genres in mind, so Game of Thrones and Harry Potter for fantasy, and images of dystopian cities for Sci-Fi.
+### Images 
+- The images used come from pixabay and pexels, and links to the images are used to connect them to their corresponding place on the site. They are chosen with the book genres in mind, so Game of Thrones and Harry Potter for fantasy, and images of dystopian cities for Sci-Fi.
 
 
 
 
-**CODE FEATURES**
+## **Code Features**
 
 Several code features include the if statements, that are used to display and hide certain webpages, for example the edit_review page cannot be seen unless a user is logged in. They are also used to check if a username and/or password is right, and dictate the appropriate action if something turns out to be false. 
 
@@ -149,20 +172,20 @@ Forms are used as a way of providing some interaction with the user. This is don
 
 
 
-**FEATURES TO BE ADDED**
+## **Features To Be Added**
 
 This project has some features I would like to add at a later date. 
 
-1: The ability for users to display their social media pages on their profile. This was attempted but due to time constraints couldn't be done in time. If statements would be used to check if they had any social media, and a flash message to be displayed if they didn't have any, prompting them to add some. 
+- 1: The ability for users to display their social media pages on their profile. This was attempted but due to time constraints couldn't be done in time. If statements would be used to check if they had any social media, and a flash message to be displayed if they didn't have any, prompting them to add some. 
 
-2: Pagination: Pagination was originally going to be used to keep the users reviews displayed in an orderly fashion, however after much research, I couldn't find anything on Pagination for PyMongo, and MongoDB, it was all either using SQL Lite and SQL Alchemy, or MongoEngine instead of PyMongo. 
+- 2: Pagination: Pagination was originally going to be used to keep the users reviews displayed in an orderly fashion, however after much research, I couldn't find anything on Pagination for PyMongo, and MongoDB, it was all either using SQL Lite and SQL Alchemy, or MongoEngine instead of PyMongo. 
 
-3: Profile picture: Currently a carousel from Materialize CSS is used to display images on the site and they can't chosen by the user, at some pont I'd like to be able to add the option for the user to display their own profile picture on the site instead of relying on the sites images.
-
-
+- 3: Profile picture: Currently a carousel from Materialize CSS is used to display images on the site and they can't chosen by the user, at some pont I'd like to be able to add the option for the user to display their own profile picture on the site instead of relying on the sites images.
 
 
-**TESTING**
+
+
+## **TESTING**
 
 This site has been tested on: Acer Aspire laptop, iPad 8th Gen, iPhone SE 2020 to check if it is sized appropriately.
 Family and friends have offered feedback on the design choices and images used. 
