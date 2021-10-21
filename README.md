@@ -111,11 +111,13 @@ Both accounts are test accounts used to test site functionality, for example: Re
 ## **Code Used**
 
  The site is build using:
- - *HTML* to provide the site's structure
+ - *HTML* to provide the site's structure and features, for example the contact form.
 
- - *CSS* to add style to the site.
+ - *CSS* to add style to the site, for example the font of the typography.
 
- - *PYTHON* to add the backend functionality to the site.
+ - *PYTHON* to add the backend functionality to the site, for example sending data to the database.
+
+ - *JQUERY* to offer interactivity to the site, for example dropdown menus.
 
 
 ### **Frameworks**
