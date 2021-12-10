@@ -66,6 +66,7 @@
     **Username**: Admin **Password** Admin
 Both accounts are test accounts used to test site functionality, for example: Reader was used to check if accounts were showing on the Database, and Admin was used to check if only reviews added by admin could be edited by admin. 
 
+View site [here](https://flask-book-site.herokuapp.com/)
 
 ## **Site Goals**
 
