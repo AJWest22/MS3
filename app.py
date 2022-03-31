@@ -138,8 +138,17 @@ def reviews():
     page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
     per_page = 12
     offset = page * per_page
+
+    total = list(mongo.db.reviews.find().count())
+
     reviews = list(mongo.db.reviews.find())
-    return render_template("reviews.html", reviews=reviews)
+
+    paginatedReviews = reviews[offset: offset + per_page]
+
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='MaterializeCSS')
+    
+    return render_template("reviews.html", reviews=paginatedReviews, page=page, per_page=per_page, pagination=pagination,)
 
 
 @app.route("/edit_review/<reviews_id>", methods=["GET", "POST"])
