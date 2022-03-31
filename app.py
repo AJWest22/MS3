@@ -129,12 +129,15 @@ def add_review():
     return render_template("add_review.html", genres2=genres2)
 
 
-@app.route("/reviews")
+@app.route("/flask-paginate")
 def reviews():
     """
     Gets and displays the reviews stored on the
     server and shows them on the site.
     """
+    page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
+    per_page = 12
+    offset = page * per_page
     reviews = list(mongo.db.reviews.find())
     return render_template("reviews.html", reviews=reviews)
 
