@@ -136,7 +136,7 @@ def reviews():
     server and shows them on the site.
     """
     page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
-    per_page = 12
+    per_page = 6
     offset = page * per_page
 
     total = list(mongo.db.reviews.find().count())
@@ -147,7 +147,7 @@ def reviews():
 
     pagination = Pagination(page=page, per_page=per_page, total=total,
                             css_framework='MaterializeCSS')
-    
+
     return render_template("reviews.html", reviews=paginatedReviews, page=page, per_page=per_page, pagination=pagination,)
 
 
