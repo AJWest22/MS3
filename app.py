@@ -2,7 +2,7 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from flask_paginate import Pagination, get_page_args
+from flask_paginate import Pagination, get_page_args, get_page_parameter
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -66,13 +66,10 @@ def login():
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
         if existing_user:
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(
-                        request.form.get("username")))
-                    return redirect(url_for(
-                        "profile", username=session["user"]))
+            if check_password_hash(existing_user["password"], request.form.get("password")):  # noqa
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 flash("Incorrect Username and/or password")
                 return redirect(url_for("login"))
@@ -129,26 +126,21 @@ def add_review():
     return render_template("add_review.html", genres2=genres2)
 
 
-@app.route("/flask-paginate")
+@app.route("/reviews")
 def reviews():
     """
     Gets and displays the reviews stored on the
     server and shows them on the site.
     """
-    page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
-    per_page = 6
-    offset = page * per_page
-
-    total = list(mongo.db.reviews.find().count())
-
+    page = request.args.get(get_page_parameter(), type=int, default=1)
     reviews = list(mongo.db.reviews.find())
-
-    paginatedReviews = reviews[offset: offset + per_page]
-
-    pagination = Pagination(page=page, per_page=per_page, total=total,
-                            css_framework='MaterializeCSS')
-
-    return render_template("reviews.html", reviews=paginatedReviews, page=page, per_page=per_page, pagination=pagination,)
+    total = len(reviews)
+    pagination = Pagination(page=page, total=total)
+    return render_template(
+        "reviews.html",
+        reviews=reviews,
+        page=page,
+        pagination=pagination,)
 
 
 @app.route("/edit_review/<reviews_id>", methods=["GET", "POST"])
@@ -201,4 +193,4 @@ def contact_page():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)

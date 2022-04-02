@@ -13,37 +13,45 @@
 3. [About The Site](#about-the-site)
     1. [Target Audience](#target-audience)
 
-4. [Code Used](#code-used)
+4. [Development Lifecycle](#development-lifecycle)
+    1. [HTML Development](#html-development)
+    2. [CSS Devlopment](#css-development)
+    3. [Python Development](#python-development)
+    4. [JQUERY Development](#jquery-development)
+
+5. [Bugs](#bugs)
+
+6. [Code Used](#code-used)
     1. [Frameworks](#frameworks)
     2. [Files Made](#files-made)
 
-5. [The Database](#the-database)
+7. [The Database](#the-database)
 
-6. [Design](#design)
+8. [Design](#design)
     1. [Typography](#typography)
     2. [Colors](#colors)
     3. [Images](#images)
 
-7. [Code Features](#code-features)
+9. [Code Features](#code-features)
 
-8. [Features to be Added](#features-to-be-added)
+10. [Features to be Added](#features-to-be-added)
 
-9. [Testing](#testing)
+11. [Testing](#testing)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
     3. [Python Validation](#python-validation)
     4. [Browser Compatibility](#browser-compatibility)
     5. [Devices Tested On](#devices-tested-on)
 
-10. [Deployment](#deployment)
+12. [Deployment](#deployment)
 
-11. [Credits](#credits)
+13. [Credits](#credits)
      1. [Icons](#icons)
      2. [Imagery](#imagery)
      3. [CSS Framework](#css-framework)
      4. [JQuery Framework](#jquery-framework)
 
-12. [Acknowledgements](#acknowledgements)
+14. [Acknowledgements](#acknowledgements)
   
 
 
