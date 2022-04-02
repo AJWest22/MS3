@@ -132,6 +132,66 @@ View site [here](https://flask-book-site.herokuapp.com/)
  - The site is primarily aimed and adults/young adults who are either big readers and want to find thier next book, or people who want to read more but aren't sure what to read. 
 
 
+## Development Lifecycle
+
+This is the second version of the site. The original didn't have enough commits, so this is the same site, and code, copied over from the original submission. The following is a brief overview of the development of the site, and contains a list of bugs that were made and corrected. Any current bugs that haven't been solved are recorded in the bugs section of this README. The overview is divided into four sections: Python Development, HTML Development, and CSS Development and JQUERY Development. 
+
+There was one bug when setting up the folders and files needed for the site, when initially creating the static folder and the CSS, Images and JS folders, they initially all ran together, and couldn't be seperated. This resulted in long filepaths, and made it harder to use, for example to access the JS for the site, the filepaths was 'static/css/images/js/style.css/script.js'. To oslve this, the folders were deleted before being re-added and and creating each folder individually, then dragging and dropping each folder individually into the main static folder. 
+
+### HTML Development
+
+The HTML files form the base structure of the site. A base.html template was used to contain the navbar and other sections that needed to appear on all pages, for example any flash messages. The base.html file also contains the scripts needed for the JQUERY, images, and CSS. Jinja Templating is used to copy the blocks across the various other HTML files/pages. There are 9 HTML files for this project: 
+
+- The base.html file which contains the template for the rest of the HTML files to follow, and contains important parts of the site functionality.
+
+- Books.html which gets the books and genres from the databe and displays them onto the site.
+
+- signup.html has a form that is used to sign up new users to the site.
+
+- login.html which holds the form used by users to login to the site and view their profile. 
+
+- profile.html holds a user's profile page, at the moment it is very basic styling, and at some point I would like to edit this and add more features, such as a customizable profile picture.
+
+- reviews.html gets the reviews on the databse, and displays them on the site.
+
+- add_review.html adds a new review to the database, which can then be displayed on the reviews page
+
+- edit_review.html is used to allow users to edit their reviews.
+
+- delete_review.html allows users to delete their reviews.
+
+- contact_page.html is used to submit suggestions to improve the site. 
+
+Forms are used a lot through the site, and can be found in more detail in the [forms](#forms) section of this README.
+
+### CSS Development
+
+MaterializeCSS is used a lot for the design and adding some key features to the site, for example: the slider, and carousel. MaterializeCSS also plays a part in the JQERY used in this site. The CSS design has not changed that much over the course of development, and is near identical to the original site, the only difference being the nav bar color, which was originally a MaterializecSS class called 'blue lighten-4', but is now blue lighten-2. 
+
+### Python Development
+
+The Python was the hardest part of this site to make. Some of the variables were changed during the site's development to make the code more readable, and this created several bugs. For example when getting the genres from the databse to display on the site, the code used was initially: genres = list(mongo.db.genres.find()) and genres=genres in the app.py file, and then '{% for genres in genres %} in the books.html file. Due to this being considered ba dcoding practise, it was then changed to 'genre' to make the code more readble and easier to follow. So it is now: genre = list(mongo.db.genres.find()) and {% for genre in genres %}.
+When this was initially done, the genres didn't display in the dropdown menu on the homepage, this was corrected by checking the for loop, and correcting it.
+
+There are functions for most things on the site, the user can interact with For example a function for getting the books, and for logging in/out and signing up. 
+
+### JQUERY Development
+
+The JQUERY used for this site comes from MaterializeCSS, and is used to add interactivity to the site. For example the slider and the carousel. The JQUERY can be found on MaterializeCSS site, at the bottom of each module. 
+
+## Bugs
+
+There were some bugs during development of this site: 
+
+- 1: Originally the a collection was created called 'Books' that was originally intended to hold the books on the database and display them on the site. However due to some technical difficulties, 'Books' was discarded, and 'Books2' was created. 
+
+- 2: During the Python development there were several issues with the reviews CRUD functionality. An error appears saying review wasn't defined, this was fixed by updating it to 'reviews', to match the backend variable.
+
+- 3: There was one instance where the books wouldn't display on the site, this was fixed by changing books2 to book, to match the backend variable.
+
+- 4: There is currently a bug with the carousel, the action image doesn't display for some reason. I have tried adding different images, and taking it out completely and re-adding it, but the image can't be displayed for some reason.
+
+
 ## **Code Used**
 
  The site is build using:
