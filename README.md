@@ -328,7 +328,6 @@ The site was designed to have a more relaxed feel to it, and easy to use. The si
 - The images used come from pixabay and pexels, and links to the images are used to connect them to their corresponding place on the site. They are chosen with the book genres in mind, so Game of Thrones and Harry Potter for fantasy, and images of dystopian cities for Sci-Fi.
 
 
-
 ## **Site Features**
 
 Site features on this site are: a navbar, contact form, dropdown menus, a signup form and a login form, and edit reviews form.  
@@ -425,8 +424,6 @@ Site features on this site are: a navbar, contact form, dropdown menus, a signup
 - Icons come from Fontawesome.
 
 
-
-
 ## **Features To Be Added**
 
 This project has some features I would like to add at a later date. 
@@ -499,6 +496,7 @@ The site has been tested on the following devices:
       <img src="static/images/ipad.PNG">
     </details>
 
+  - NB I have used the same photo for the iPad7th Gen as the iPad 8th gen, as they looked the same, and I havn't been able to get a screen grab of the site on that device.
 ## Deployment
 
 - This site was deployed using Heroku using the following steps:
