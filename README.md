@@ -465,9 +465,27 @@ This project has some features I would like to add at a later date.
 
 The website has been viewed on the following browsers:
  - Google Chrome
+  <details><summary>Home Page View on Chrome Browser</summary>
+    <img src="static/images/chrome.png">
+  </details>
+
  - Mozilla Firefox
+
+ <details><summary>Home Page View on Firefox Browser</summary>
+    <img src="static/images/acer-aspire5.png">
+  </details>
+
  - Safari
+  
+  <details><summary>Home Page View on Safari</summary>
+    <img src="static/images/ipad.PNG">
+  </details>
+
  - Microsoft Edge
+
+ <details><summary>Home Page View on Microsft Edge browser</summary>
+    <img src="static/images/edge.png">
+  </details>
 
 ### Devices tested on
 
@@ -497,6 +515,8 @@ The site has been tested on the following devices:
     </details>
 
   - NB I have used the same photo for the iPad7th Gen as the iPad 8th gen, as they looked the same, and I havn't been able to get a screen grab of the site on that device.
+
+
 ## Deployment
 
 - This site was deployed using Heroku using the following steps:
