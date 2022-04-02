@@ -427,7 +427,7 @@ This project has some features I would like to add at a later date.
   - The code was tested using The W3C Jigsaw CSS Validation Service and encountered no errors:
 
   <details><summary>CSS Validation</summary>
-  <img src="static/images/css-validation2.png">
+  <img src="static/images/css-validation.png">
   </details>
 
 
