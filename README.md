@@ -413,8 +413,6 @@ This project has some features I would like to add at a later date.
 - 3: Profile picture: Currently a carousel from Materialize CSS is used to display images on the site and they can't chosen by the user, at some pont I'd like to be able to add the option for the user to display their own profile picture on the site instead of relying on the sites images.
 
 
-
-
 ## **TESTING**
 
 ### HTML Validation
@@ -428,11 +426,7 @@ This project has some features I would like to add at a later date.
 ### CSS Validation
   - The code was tested using The W3C Jigsaw CSS Validation Service and encountered no errors:
 
-  <details><summary>CSS Validation p1</summary>
-  <img src="static/images/css-validation1.png">
-  </details>
-
-  <details><summary>CSS Validation p2</summary>
+  <details><summary>CSS Validation</summary>
   <img src="static/images/css-validation2.png">
   </details>
 
