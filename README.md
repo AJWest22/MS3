@@ -28,6 +28,7 @@
 
 7. [The Database](#the-database)
     1. [Database Collection](#database-collection)
+    2. [Mongo URI Keys](#mongo-uri-keys)
 
 8. [Design](#design)
     1. [Typography](#typography)
@@ -307,7 +308,7 @@ Below are some images of the collections in the database so you can see how data
   5. In the network access tab, allow network access from the ip-address of the application connecting to the database
 
   6. In the Databases section click Connect, and select connect your application
-  
+
   7. Note the MONGO_URI, MONGO_DBNAME and user, these parameters are used when deploying locally(env.py file) and deploying on the likes of heroku(config vars)
 
 ## **Design**
