@@ -292,6 +292,24 @@ Below are some images of the collections in the database so you can see how data
   <img src="static/images/reviews.jpg">
   </details>
 
+  ### Mongo URI Keys
+
+  The following is a brief overview on how to make a Mongodb database
+
+  1. Create an account at mongodb
+
+  2. Create a database cluster
+
+  3. Select the cluster, and in the collections section create a database and create 5 collections under the database: memories, comments, ratings, tournaments, users 
+
+  4. In the database access, create a user and allow the user read/write access. Note the username
+
+  5. In the network access tab, allow network access from the ip-address of the application connecting to the database
+
+  6. In the Databases section click Connect, and select connect your application
+  
+  7. Note the MONGO_URI, MONGO_DBNAME and user, these parameters are used when deploying locally(env.py file) and deploying on the likes of heroku(config vars)
+
 ## **Design**
 
 The site was designed to have a more relaxed feel to it, and easy to use. The site uses simpe coloring, fonts and imagery to create and achieve this effect. 
@@ -307,7 +325,6 @@ The site was designed to have a more relaxed feel to it, and easy to use. The si
 
 ### Images 
 - The images used come from pixabay and pexels, and links to the images are used to connect them to their corresponding place on the site. They are chosen with the book genres in mind, so Game of Thrones and Harry Potter for fantasy, and images of dystopian cities for Sci-Fi.
-
 
 
 
