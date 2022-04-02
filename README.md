@@ -534,6 +534,6 @@ Materialize CSS also provided the JQuery for this site, for the dropdown menus o
 
 ## Acknowledgements 
 
-- My mentor Mo Shami for his feedback.
+- My mentor Tim Nelson for his feedback and support.
 
-- My family and friends for testing this site on their devices.
+- My family and friends for testing this site on their devices, and for their support with this project and course.
