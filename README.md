@@ -27,7 +27,7 @@
     2. [Files Made](#files-made)
 
 7. [The Database](#the-database)
-    [Database Collection](#database-collection)
+    1. [Database Collection](#database-collection)
 
 8. [Design](#design)
     1. [Typography](#typography)
