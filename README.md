@@ -196,6 +196,8 @@ There were some bugs during development of this site:
 
 - 4: There is currently a bug with the carousel, the action image doesn't display for some reason. I have tried adding different images, and taking it out completely and re-adding it, but the image can't be displayed for some reason.
 
+- 5: When editing a review it can sometimes not open the review. If this happens, double click the review's edit button and it should then open and allow for it to be edited.
+
 
 ## **Code Used**
 
