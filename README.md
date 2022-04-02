@@ -27,6 +27,7 @@
     2. [Files Made](#files-made)
 
 7. [The Database](#the-database)
+    [Database Collection](#database-collection)
 
 8. [Design](#design)
     1. [Typography](#typography)
@@ -237,7 +238,6 @@ There were some bugs during development of this site:
  - The app.py file provides the backend code that handles the data of the site. It is used for submitting data to the database and pulling information from the database. 
 
  - The env.py file that was created contains information regarding the database and has not been pushed to GitHub.
-
 
 
 
