@@ -477,9 +477,27 @@ The website has been viewed on the following browsers:
 The site has been tested on the following devices:
 
  - iPhone SE 2020
+  <details><summary>Homepage View on iPhone SE 2020</summary>
+    <img src="static/images/iphone.PNG">
+  </details>
+
+  <details><summary>Menu View on iPhone SE 2020</summary>
+    <img src="static/images/iphone2.PNG">
+  </details>
+
  - iPad 8th Gen
+    <details><summary>Home Page View on iPad 8th gen</summary>
+      <img src="static/images/ipad.PNG">
+    </details>
  - Acer Aspire 5
+    <details><summary>CSS Validation</summary>
+      <img src="static/images/acer-aspire5.png">
+    </details>
+
  - iPad 7th Gen
+    <details><summary>Home Page View on iPad 7th gen</summary>
+      <img src="static/images/ipad.PNG">
+    </details>
 
 ## Deployment
 
