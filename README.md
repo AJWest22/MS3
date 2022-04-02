@@ -18,6 +18,7 @@
     2. [CSS Devlopment](#css-development)
     3. [Python Development](#python-development)
     4. [JQUERY Development](#jquery-development)
+    5. [Pagination](#pagination)
 
 5. [Bugs](#bugs)
 
@@ -178,6 +179,10 @@ There are functions for most things on the site, the user can interact with For 
 ### JQUERY Development
 
 The JQUERY used for this site comes from MaterializeCSS, and is used to add interactivity to the site. For example the slider and the carousel. The JQUERY can be found on MaterializeCSS site, at the bottom of each module. 
+
+### Pagination
+
+Pagaination was added in the later stages of development. Flask-paginate is used to implement this on the reviews page, so the reviews count will be displayed on the reviews page.
 
 ## Bugs
 
